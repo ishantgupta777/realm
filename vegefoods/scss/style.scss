@@ -1,15 +1,15 @@
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
 
-$font-primary: 'Poppins',Arial, sans-serif;
-$font-secondary: 'Lora',Georgia, serif;
-$font-tertiary: 'Amatic SC',cursive;
+$font-primary: 'Raleway', sans-serif;
+$font-secondary: 'Raleway', sans-serif;
+$font-tertiary: 'Raleway', sans-serif;
 
 $white: #fff;
 $black: #000000;
 // $darken: #3a4348;
 
-$primary: #82ae46;
+$primary: #ff1e24;
 $secondary: #ffe6eb;
 
 $color-1: #e4b2d6;
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5,
 		}
 		> .nav-item {
 			> .nav-link {
-				font-size: 11px;
+				font-size: 16px;
 				padding-top: 1.5rem;
 				padding-bottom: 1.5rem;
 				padding-left: 20px;
@@ -137,7 +137,8 @@ h1, h2, h3, h4, h5,
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				&:hover {
-					color: $black;
+					color: $primary;
+					font-size: 17px;
 				}
 				opacity: 1!important;
 				@include media-breakpoint-down(md){
@@ -205,7 +206,8 @@ h1, h2, h3, h4, h5,
 			}
 			&.active {
 				> a {
-					color: $black;
+					color: $primary;
+					font-weight: 800;
 					@include media-breakpoint-down(md){
 						color: $white;
 					}
@@ -484,13 +486,13 @@ h1, h2, h3, h4, h5,
 	}
 	&.home-slider {
 		position: relative;
-		height: 650px;
+		width: 100vw;
 		z-index: 0;
 		.slider-item {
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center center;
-			height: 650px;
+			width: 100vw;
 			position: relative;
 			z-index: 0;
 			@include media-breakpoint-down(lg){
@@ -503,7 +505,7 @@ h1, h2, h3, h4, h5,
 				left: 0;
 				right: 0;
 				background: $black;
-				opacity: .2;
+				opacity: .55;
 			}
 			.slider-text {
 				height: 650px;
@@ -520,12 +522,23 @@ h1, h2, h3, h4, h5,
 					display: inline-block;
 					color: $white;
 				}
+				.slide1{
+					@include media-breakpoint-up(md) {
+						margin-top: 200px;
+						margin-right: 75px;
+					}
+				}
+				.slide2{
+					@include media-breakpoint-up(md) {
+						margin-top: -250px;
+					}
+				}
 				h1 {
-					font-size: 8vw;
+					font-size: 2.5vw;
 					color: $white;
-					line-height: 1.3;
+					line-height: 1.1;
 					font-weight: 400;
-					font-family: $font-tertiary;
+					font-family: $font-primary;
 					@include media-breakpoint-down(sm) {
 						font-size: 40px;
 						// color: $pri;
@@ -646,16 +659,7 @@ h1, h2, h3, h4, h5,
 }
 
 .bg-color-1{
-	background: $color-1;
-}
-.bg-color-2{
-	background: $color-2;
-}
-.bg-color-3{
-	background: $color-3;
-}
-.bg-color-4{
-	background: $color-4;
+	background: $primary;
 }
 
 //BUTTON
@@ -1713,6 +1717,8 @@ textarea.form-control {
 
 
 .ftco-category{
+	margin-top: -200px;
+	z-index: -1;
 	.category-wrap{
 		display: block;
 		width: 100%;
@@ -1727,17 +1733,14 @@ textarea.form-control {
 				}
 			}
 		}
-	}
-	.category-wrap-2{
-		width: 100%;
-		.text{
-			width: 100%;
-			h2{
-				color: $primary;
-				font-family: $font-secondary;
-				font-style: italic;
-				font-size: 24px;
-			}
+		.hover{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: $black;
+				opacity: .55;
 		}
 	}
 }
